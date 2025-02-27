@@ -131,6 +131,7 @@ const Projects = () => {
                     backgroundColor: '#111111',
                   }}>
                     <Box
+                      onClick={() => window.open(project.demoLink, '_blank')}
                       sx={{
                         width: '100%',
                         height: { xs: '300px', md: '400px' },
@@ -139,6 +140,7 @@ const Projects = () => {
                         alignItems: 'center',
                         justifyContent: 'center',
                         p: 4,
+                        cursor: 'pointer',
                         '& img': {
                           width: '100%',
                           height: 'auto',
@@ -146,6 +148,10 @@ const Projects = () => {
                           objectFit: 'contain',
                           borderRadius: 1,
                           margin: 'auto',
+                          transition: 'transform 0.3s ease-in-out',
+                        },
+                        '&:hover img': {
+                          transform: 'scale(1.05)',
                         },
                       }}
                     >
